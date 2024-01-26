@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  export-service:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: export-service:latest
+    container_name: export-service
+    restart: always
+    ports:
+      - 7001:7001
