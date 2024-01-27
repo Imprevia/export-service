@@ -12,7 +12,7 @@ export class PuppeteerService {
         await page.setCookie(...data.cookies);
       }
       await page.goto(data.url);
-      const buffer = await page.screenshot({ fullPage: true, type: 'jpeg' });
+      const buffer = await page.screenshot({ fullPage: true, type: 'png' });
       await page.close();
       return buffer;
     });
